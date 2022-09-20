@@ -1,5 +1,7 @@
 import $ from 'jquery'
 import { useEffect } from 'react';
+import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
+
 /* eslint-disable */
 
 const { MerkleTree } = require('merkletreejs');
@@ -46,7 +48,14 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="App text-center">
+      
+
+      <CrossmintPayButton
+        clientId="a67fe242-1f6c-4804-a726-f0557cef6170"
+        mintConfig={{ "type": "erc-721", "totalPrice": "0.65", "_mintAmount": "1" }}
+        environment="staging"
+      />
     </div>
   );
 }
