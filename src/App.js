@@ -50,6 +50,7 @@ function App() {
   return (
     <div className="App text-center">
       <CrossmintPayButton
+        id="crossmintBTN"
         clientId="4a230a92-4d32-431b-8f18-b4e10def1a97"
         mintConfig={{ "type": "erc-721", "totalPrice": "0", "_mintAmount": "1" }}
         environment="staging"

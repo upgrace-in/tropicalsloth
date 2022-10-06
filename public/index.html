@@ -120,7 +120,7 @@
 <body itemscope="itemscope"
 	class="home page-template-default page page-id-125 theme-astra woocommerce-js exclusive-addons-elementor ast-single-post ast-mobile-inherit-site-logo ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header ast-page-builder-template ast-no-sidebar astra-3.9.2 ast-full-width-primary-header elementor-default elementor-kit-475 elementor-page elementor-page-125 ast-desktop e--ua-blink e--ua-chrome e--ua-webkit"
 	style="" data-elementor-device-mode="desktop">
-	
+
 	<div class="hfeed site" id="page">
 		<header
 			class="site-header ast-primary-submenu-animation-fade header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline"
@@ -168,7 +168,8 @@
 				.hidden {
 					display: none;
 				}
-				.App > button{
+
+				.App>button {
 					margin-right: auto;
 					margin-left: auto;
 				}
@@ -243,12 +244,14 @@
 														data-id="302b47b" data-element_type="widget"
 														data-widget_type="heading.default">
 														<div class="elementor-widget-container">
-															<h3 id="box-total-count" class="hidden text-center elementor-heading-title elementor-size-medium"
+															<h3 id="box-total-count"
+																class="hidden text-center elementor-heading-title elementor-size-medium"
 																style="text-align: center !important;">
 																<span id="totalSupply">0</span>/<span
 																	id="maxSupply">1000</span> NFTs
 																<Br>
-																1 TropicalSloth costs <span id="mintCost">0.65</span> ETH
+																1 TropicalSloth costs <span id="mintCost">0.65</span>
+																ETH
 															</h3>
 														</div>
 													</div>
@@ -283,9 +286,11 @@
 																	<span class="hidden" id="user_address"></span>
 																	<span class="hidden" id="hash_proof"></span>
 
-																	<button id="WLmintBtn" class="hidden wht text-center"
+																	<button id="WLmintBtn"
+																		class="hidden wht text-center"
 																		type="button">Mint</button>
-																	<button id="publicMintBtn" class="hidden wht text-center"
+																	<button id="publicMintBtn"
+																		class="hidden wht text-center"
 																		type="button">Mint</button>
 																	<button id="connect_btn" class="wht text-center"
 																		type="button">Connect
@@ -519,6 +524,10 @@
 	<script src="https://unpkg.com/web3modal"></script>
 	<script src="https://unpkg.com/@walletconnect/web3-provider"></script>
 	<script src="js/integration.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+	<script src="js/backendSide.js"></script>
 </body>
 
 </html>
