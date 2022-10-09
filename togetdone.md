@@ -1,4 +1,3 @@
-Button says "Buy with credit card"
 Input field with continue appears
 <!-- Match with firebase and give a response either true or false
 if true:

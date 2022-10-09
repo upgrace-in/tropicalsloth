@@ -2,6 +2,8 @@ $(document).ready(async function () {
 
     userIsWhitelisted = false
 
+    let crosssMINTcheckInterval;
+
     const firebaseConfig = {
         apiKey: "AIzaSyCM0RgYhycoCKNPJL4nfG2md6c9UEu4oao",
         authDomain: "tropicalsloth-7fe42.firebaseapp.com",
@@ -17,19 +19,36 @@ $(document).ready(async function () {
     async function fetchWhitelisted(usersAddress) {
         const snapshot = await firebase.firestore().collection('whitelisted').get()
         var address_map = snapshot.docs.map(doc => doc.data());
-        for(var i=0; i < address_map.length; i++){
-            if(address_map[i]["address"] == usersAddress){
+        for (var i = 0; i < address_map.length; i++) {
+            if (address_map[i]["address"] == usersAddress) {
                 userIsWhitelisted = true
                 break;
             }
         }
-        if(userIsWhitelisted == true){
+        if (userIsWhitelisted == true) {
             // Initialize the button
+            clearInterval(crosssMINTcheckInterval);
+            $('#pay-credit-card').fadeOut()
             $('#crossmintBTN').show()
-        }else{
-            alert("You are not whitelisted !!!")
-        }     
+        } else {
+            alert("You are not whitelisted !!!");
+            location.reload()
+        }
     }
 
-    // await fetchWhitelisted("Hari")
+    $('#checkAddress').click(async () => {
+        $('#checkAddress').addClass('disabled')
+        let usersAddress = $('#usersAddress').val()
+        if (usersAddress !== '') {
+            $('#checkAddress').html('...')
+            await fetchWhitelisted(usersAddress)
+        } else {
+            alert("Invalid Email ID !!!")
+        }
+        $('#checkAddress').removeClass('disabled')
+    })
+
+    crosssMINTcheckInterval = setInterval(() => {
+        $('#crossmintBTN').hide()
+    }, 100)
 });
