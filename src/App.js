@@ -11,7 +11,7 @@ function App() {
   const [total_Price, set_total_Price] = useState(0)
   const [mint_count, set_mint_count] = useState(1)
 
-  const [mint_cost, set_mint_cost] = useState(0.55)
+  const [mint_cost, set_mint_cost] = useState(0)
   const [max_count, set_max_count] = useState(2)
 
   function increase() {
@@ -43,13 +43,13 @@ function App() {
   // console.log(rootHash)
 
   useEffect(() => {
-    let mintcost_intern = setInterval(() => {
-      let mintCost = parseInt($('#mintCost').text())
-      if (mintCost !== 0) {
-        set_mint_cost(mintCost)
-        clearInterval(mintcost_intern)
-      }
-    }, 1000)
+    // let mintcost_intern = setInterval(() => {
+    //   let mintCost = parseInt($('#mintCost').text())
+    //   if (mintCost !== 0) {
+    //     set_mint_cost(mintCost)
+    //     clearInterval(mintcost_intern)
+    //   }
+    // }, 1000)
 
     let maxcount_intern = setInterval(() => {
       let maxCount = parseInt($('#max_count').text())
