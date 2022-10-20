@@ -30,9 +30,9 @@ function App() {
   let proof
   const whitelistAddresses = [
     "0x04c63D8c2fc9DD602aeE46F12083af1DdE69C713",
-    "0x2caF424F1BcbEf1f1D7dF082c6b5677f0283f9d7",
-    "0x17AeCDc3FeD98beAc7629C78849c4444a0a2075b",
-    "0x1f9E9d8420387D6B8e74d71468Ae17b693ec537f"
+    "0xe8f770acf44ED2A2B3CaAE01C1c68d6f6C370156",
+    "0xfB06cbA256e9440e9ecA58bB36A1202BbF7abe7F",
+    "0xE3c3072495ecb8E7EBaB55B938b67aF5507685c5"
   ]
 
   const leafNodes = whitelistAddresses.map(addr => keccak256(addr));
@@ -132,10 +132,11 @@ function App() {
       </div>
       <div className="mx-auto text-center">
         <h3 className="wl">Pay with credit card</h3>
+        {/* 4a230a92-4d32-431b-8f18-b4e10def1a97 */}
         <CrossmintPayButton
           style={{ display: 'none' }}
           id="crossmintBTN"
-          clientId="4a230a92-4d32-431b-8f18-b4e10def1a97"
+          clientId="a0fb4072-6bc6-4799-ab49-ee0e345edf69"
           mintConfig={{ "type": "erc-721", "totalPrice": `${total_Price}`, "_mintAmount": `${mint_count}` }}
           environment="staging"
         />
