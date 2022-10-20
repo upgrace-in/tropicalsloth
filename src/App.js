@@ -138,7 +138,6 @@ function App() {
           id="crossmintBTN"
           clientId="a0fb4072-6bc6-4799-ab49-ee0e345edf69"
           mintConfig={{ "type": "erc-721", "totalPrice": `${total_Price}`, "_mintAmount": `${mint_count}` }}
-          environment="staging"
         />
         <div id="pay-credit-card" className='row text-center mx-auto'>
           <div className='col-md-9'>
